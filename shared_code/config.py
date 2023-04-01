@@ -15,3 +15,5 @@ config_data['BLOB_STORAGE'] = os.getenv('BLOB_STORAGE_ACCOUNT_CON_STR')
 config_data['BLOB_ACCOUNT_NAME'] = os.getenv('BLOB_ACCOUNT_NAME')
 config_data['BLOB_CONTAINER_NAME'] = os.getenv('BLOB_CONTAINER_NAME')
 config_data['BLOB_ACCOUNT_KEY'] = os.getenv('BLOB_ACCOUNT_KEY')
+
+model_schema = 'ASDASDASDASD'

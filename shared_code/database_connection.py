@@ -13,16 +13,16 @@ class SQLconnection:
         # params = quote_plus(f'mysql+pymysql://{self.user}:{self.password}@{self.server}:{self.port}/{self.database}')
 
         params = quote_plus(
-            "Driver={ODBC Driver 18 for SQL Server};"
-            f"Server=tcp:{self.server},{self.port};Database={self.database};"
-            f"Uid=n{self.user};"
+            "Driver={ODBC+Driver+18+for+SQL+Server};"
+            f"Server=tcp:{self.server},{self.port};"
+            f"Database={self.database};"
+            f"Uid={self.user};"
             f"Pwd={self.password};"
             "Encrypt=yes;"
             "TrustServerCertificate=no;"
             "Connection Timeout=30;"
         )
-
-        conn_str = f'mssql+pyodbc:///?odbc_connect={params}'
+        conn_str = f'mssql+pyodbc:///?autocommit=true&odbc_connect={params}'
         return conn_str
 
 
