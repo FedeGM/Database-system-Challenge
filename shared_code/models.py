@@ -43,7 +43,7 @@ class Department(Base):
     __table_args__ = {'schema': model_schema}
 
     id: Mapped[int] = mapped_column(Integer(), primary_key= True, nullable= False)
-    deparment: Mapped[str] = mapped_column(String(255), nullable= False)
+    department: Mapped[str] = mapped_column(String(255), nullable= False)
 
     hired_employees: Mapped[List['HiredEmployee']] = relationship(back_populates='departments', 
                                                                   cascade= 'all, delete-orphan', 
